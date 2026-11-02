@@ -117,7 +117,7 @@ async function loadLink(){
 }
 const waOk=u=>/^https:\/\/chat\.whatsapp\.com\/[A-Za-z0-9_\-?=&%.]+$/.test(u);
 function waCard(r){
-  if(r&&(r.wa===undefined||r.wa===null))return '<div class="card">جاري تحميل لينك جروب الواتساب…</div>';
+  if(r&&(r.wa===undefined||r.wa===null))return '<div class="card"> جاري تحميل لينك جروب الواتساب انتظر ثانية…</div>';
   const u=r&&r.wa;
   return u&&waOk(u)?`<div class="card">انضم لجروب الواتساب الخاص بروتيشنك:<br><a class="wa" href="${esc(u)}" target="_blank" rel="noopener">فتح جروب الواتساب</a></div>`:'';
 }
